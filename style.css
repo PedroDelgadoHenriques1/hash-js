@@ -36,6 +36,29 @@ body {
     font-weight: 600;
 }
 
+.container h1 {
+    font-size: 36px; /* Tamanho maior para destaque */
+    font-weight: 700; /* Negrito */
+    color: #007BFF;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 3px; /* Espaçamento mais suave */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    position: relative; /* Necessário para efeitos decorativos */
+}
+
+.container h1::after {
+    content: ""; /* Linha decorativa abaixo do título */
+    position: absolute;
+    bottom: -8px; /* Espaço entre o texto e a linha */
+    left: 50%; /* Centraliza a linha */
+    transform: translateX(-50%); /* Ajusta centralização */
+    width: 50%; /* Comprimento da linha */
+    height: 3px; /* Espessura da linha */
+    border-radius: 2px; /* Cantos arredondados */
+}
+
+
+
 /* Inputs */
 .container input {
     width: 100%; /* Remove cálculo para melhor manutenção */
