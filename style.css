@@ -1,0 +1,123 @@
+/* Estilo global */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Fonte moderna */
+    background: linear-gradient(135deg, #e3f2fd, #f3e5f5); /* Gradiente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais moderna */
+    padding: 30px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Animação ao passar o mouse */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho */
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222222;
+    font-weight: 600;
+}
+
+/* Inputs */
+.container input {
+    width: 100%; /* Remove cálculo para melhor manutenção */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante layout consistente */
+    background-color: #f9f9f9; /* Fundo sutil */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Efeito de foco */
+    outline: none;
+}
+
+/* Botão */
+.container button {
+    width: 100%;
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradiente */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no botão */
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: scale(1.03); /* Leve zoom ao passar o mouse */
+}
+
+.container button:active {
+    transform: scale(0.98); /* Efeito ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Textos */
+.container p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Links */
+.container a {
+    color: #007BFF;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        max-width: 320px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
