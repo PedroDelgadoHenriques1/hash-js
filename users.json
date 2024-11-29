@@ -1,0 +1,40 @@
+[
+  {
+    "name": "fael",
+    "hash": "$2b$10$vR9pB7JjG69xeCCG7g5JL.4fsMj9z4niccXEcHYvD82dIFh7mHuc2",
+    "salt": "fael1732899644546",
+    "failedAttempts": 5,
+    "lockedUntil": 1732907165778
+  },
+  {
+    "name": "fael1",
+    "hash": "$2b$10$Px9fIwxvnPrsrMdOPDRH3.OsIEN5cd/qjDzSkw8gH9KrT7kkJHaS.",
+    "salt": "fael11732899651636",
+    "failedAttempts": 0,
+    "lockedUntil": null
+  },
+  {
+    "name": "rafael123",
+    "hash": "$2b$10$YAmgpndnpZhF2Hy6sJ6Uu.G9Nvtxpf11qGD0el2BjB63Zct/MwmK.",
+    "salt": "rafael1231732900326139"
+  },
+  {
+    "name": "fael10",
+    "hash": "$2b$10$XUQhk1ogQfo75TK80RuGJ.uImssMyoZEVjHC5tPtnkU4uyQLSuD9y",
+    "salt": "fael101732902188847"
+  },
+  {
+    "name": "fael123",
+    "hash": "$2b$10$UGugPoUZNSS/.cXyIs1LW.Pwr4/Ok4tnrTD8IJvyzYjO2d4XlgJc2",
+    "salt": "fael1231732906704799",
+    "failedAttempts": 5,
+    "lockedUntil": 1732906772125
+  },
+  {
+    "name": "anthon",
+    "hash": "$2b$10$DlEDQHUFbCyryH4OuRS.1eBaplR0GzR5CQ3jPwdSTqrXLnUZhSbbC",
+    "salt": "anthon1732908721911",
+    "failedAttempts": 0,
+    "lockedUntil": null
+  }
+]

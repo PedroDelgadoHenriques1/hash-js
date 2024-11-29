@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bem-vindo(a)!</h1>
+        <div id="user-list"></div>
+        <button onclick="logout()">Deslogar</button>
+    </div>
+    <script>
+        // verifica se o usuario esta logado
+        async function checkAuth() {
+            const response = await fetch('/check-auth');
+            if (!response.ok) {
+                window.location.href = '/';
+            } else {
+                loadUsers();
+            }
+        }
+
+        // carrega pagina de usuarios e suas hashes
+        async function loadUsers() {
+            const response = await fetch('/users');
+            const users = await response.json();
+
+            const userList = document.getElementById('user-list');
+            userList.innerHTML = '<h3>Usuários:</h3>';
+            users.forEach(user => {
+                userList.innerHTML += `<p>${user.name}: ${user.hash}</p>`;
+            });
+        }
+
+        function logout() {
+            window.location.href = '/logout';
+        }
+
+        checkAuth(); // chama verificacao de autenticacao
+    </script>
+</body>
+
+</html>

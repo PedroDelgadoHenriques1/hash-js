@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <input type="text" id="login-name" placeholder="Nome" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button onclick="login()">Entrar</button>
+        <p>Não tem uma conta? <a href="/register.html">Cadastre-se</a></p>
+        <p><a href="/reset-password.html">Esqueci a senha</a></p>
+    </div>
+
+    <script>
+        async function login() {
+            const name = document.getElementById('login-name').value;
+            const password = document.getElementById('login-password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, password })
+            });
+
+            if (response.ok) {
+                window.location.href = '/dashboard.html';
+            } else {
+                alert(await response.text());
+            }
+        }
+    </script>
+</body>
+
+</html>
